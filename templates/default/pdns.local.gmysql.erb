@@ -1,0 +1,13 @@
+# MySQL Configuration
+#
+# Launch gmysql backend
+launch=gmysql
+
+# gmysql parameters
+gmysql-host=<%= node[:pdns]['gmysql-host'] %>
+gmysql-port=<%= node[:pdns]['gmysql-port'] %>
+gmysql-dbname=<%= node[:pdns]['gmysql-dbname'] %>
+gmysql-user=<%= node[:pdns]['gmysql-user'] %>
+gmysql-password=<%= @powerdns_password %>
+gmysql-dnssec=<%= node[:pdns]['gmysql-dnssec'] %>
+# gmysql-socket=
