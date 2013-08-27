@@ -64,7 +64,7 @@ disable-axfr=no
 #################################
 # distributor-threads   Default number of Distributor (backend) threads to start
 #
-# distributor-threads=3
+distributor-threads=<%= node[:pdns][:server][:distributor_threads] %>
 
 #################################
 # fancy-records Process URL and MBOXFW records
@@ -184,7 +184,7 @@ module-dir=/usr/lib/powerdns
 #################################
 # receiver-threads      Number of receiver threads to launch
 #
-# receiver-threads=1
+receiver-threads=<%= node[:pdns][:server][:receiver_threads] %>
 
 #################################
 # recursive-cache-ttl   Seconds to store packets in the PacketCache

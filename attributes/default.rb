@@ -41,10 +41,6 @@ default["pdns"]["gmysql-user"] = "powerdns"
 default["pdns"]["gmysql-password"] = "port53baby"
 default["pdns"]["gmysql-dnssec"] = "yes"
 
-default["pdns"]["server"]["allow_axfr_ips"] = [
-  "127.0.0.1"
-]
-
 default["pdns"]["recursor"]["allow_from"] = [
   "127.0.0.0/8",
   "10.0.0.0/8",
