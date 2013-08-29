@@ -20,6 +20,7 @@ allow-recursion=127.0.0.1
 # cache-ttl     Seconds to store packets in the PacketCache
 #
 # cache-ttl=20
+cache-ttl=<%= node[:pdns][:server][:cache_ttl] %>
 
 #################################
 # chroot        If set, chroot to this directory for more security
@@ -174,7 +175,7 @@ module-dir=/usr/lib/powerdns
 #################################
 # queue-limit   Maximum number of milliseconds to queue a query
 #
-# queue-limit=1500
+queue-limit=<%= node[:pdns][:server][:queue_limit] %>
 
 #################################
 # query-local-address   The IP address to use as a source address for sending
@@ -274,27 +275,27 @@ socket-dir=/var/run
 #################################
 # webserver     Start a webserver for monitoring
 #
-# webserver=no
+webserver=<%= node[:pdns][:server][:webserver] %>
 
 #################################
 # webserver-address     IP Address of webserver to listen on
 #
-# webserver-address=127.0.0.1
+webserver-address=<%= node[:pdns][:server][:webserver_address] %>
 
 #################################
 # webserver-password    Password required for accessing the webserver
 #
-# webserver-password=
+webserver-password=<%= node[:pdns][:server][:webserver_password] %>
 
 #################################
 # webserver-port        Port of webserver to listen on
 #
-# webserver-port=8081
+webserver-port=<%= node[:pdns][:server][:webserver_port] %>
 
 #################################
 # webserver-print-arguments     If the webserver should print arguments
 #
-# webserver-print-arguments=no
+webserver-print-arguments=<%= node[:pdns][:server][:webserver_print_arguments] %>
 
 #################################
 # wildcard-url  Process URL and MBOXFW records
